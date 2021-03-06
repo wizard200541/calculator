@@ -1,46 +1,58 @@
 .wrapper {
-  height: 600px;
-  width: 400px;
+  height: 520px;
+  width: 320px;
   background: #14213d;
-  padding: 30px;
-  border-radius: 10px;
+  box-shadow: 0px 0px 20px 0px #aaa;
 }
 
 .display {
-  height: 100px;
   width: 100%;
+  line-height: 130px;
   background: #000000;
-  color: #fca311;
-  padding: 10px;
+  color: white;
+  padding: 0 30px;
   font-size: 55px;
   text-align: right;
-  margin-bottom: 20px;
   border: none;
 }
 
 .container {
-  height: calc(100% - 120px);
+  height: calc(100% - 130px);
   width: 100%;
-  border: 1px solid #FFF;
 }
 
-.container .btn {
+.btn {
   width: 25%;
-  height: 25%;
+  height: 20%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #FFF;
+  color: #000;
+  font-weight: 300;
   background: #e5e5e5;
   font-size: 28px;
-  border: 2px solid #FFF;
   cursor: pointer;
 }
 
-.container .btn:hover {
-  background: darkgray;
+.btn + .btn {
+  border-left: 1px solid #000;
 }
-.container .btn:active {
-  color: #fca311;
-  background: darkgray;
+
+.btn:nth-child(4n + 1) {
+  border-left: none;
+}
+
+.btn:nth-child(n + 5) {
+  border-top: 1px solid #000;
+}
+
+.btn:active {
+  box-shadow: inset 0px 0px 80px 0px rgb(0 0 0 / 25%);
+}
+.btn.action {
+  color: #FFF;
+  background: linear-gradient(to bottom, rgba(252,156,23,1) -100%, rgba(247,126,27,1) 100%);
+}
+.btn.tool {
+  background: #BBB;
 }
