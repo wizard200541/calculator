@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import AutoScalingText from '../AutoScalingText';
 import './style.css';
 
 function Calculator() {
@@ -46,7 +47,11 @@ function Calculator() {
   }
   return (
     <div className="wrapper">
-      <input className="display" readOnly value={firstNum ? `${firstNum}${action}${secondNum}` : sum}/>
+      <div className="display">
+        <AutoScalingText>
+          {firstNum ? `${firstNum}${action}${secondNum}` : sum}
+        </AutoScalingText>
+      </div>
       <div className="container">
         <div className="btn tool" >AC</div>
         <div className="btn tool" >±</div>
